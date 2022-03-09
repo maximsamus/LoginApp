@@ -117,7 +117,7 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-6F-I9E">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-6F-I9E">
                                 <rect key="frame" x="145" y="250" width="100" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="0qb-Mh-FmI"/>
@@ -136,8 +136,8 @@
                         <constraints>
                             <constraint firstItem="OtY-6F-I9E" firstAttribute="leading" relation="lessThanOrEqual" secondItem="byL-ZR-9MD" secondAttribute="leading" constant="145" id="9Qj-Bb-83Y"/>
                             <constraint firstItem="byL-ZR-9MD" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="OtY-6F-I9E" secondAttribute="trailing" constant="145" id="O9g-kn-TuU"/>
+                            <constraint firstItem="OtY-6F-I9E" firstAttribute="top" secondItem="ciW-Hi-Ydd" secondAttribute="bottom" constant="68" id="bYT-Ty-B1C"/>
                             <constraint firstItem="ciW-Hi-Ydd" firstAttribute="top" secondItem="byL-ZR-9MD" secondAttribute="top" constant="140" id="cGw-Bm-Yj4"/>
-                            <constraint firstItem="OtY-6F-I9E" firstAttribute="top" relation="lessThanOrEqual" secondItem="ciW-Hi-Ydd" secondAttribute="bottom" constant="68" id="dWk-M2-D4T"/>
                             <constraint firstItem="OtY-6F-I9E" firstAttribute="centerX" secondItem="byL-ZR-9MD" secondAttribute="centerX" id="efH-fz-RGO"/>
                             <constraint firstItem="ciW-Hi-Ydd" firstAttribute="centerX" secondItem="byL-ZR-9MD" secondAttribute="centerX" id="jCS-wz-i5u"/>
                         </constraints>
