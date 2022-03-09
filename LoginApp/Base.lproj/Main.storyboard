@@ -28,8 +28,8 @@
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddw-Tx-XbM"/>
-                                            <segue destination="vlZ-Vd-hgx" kind="show" identifier="1" id="LtM-aD-yhS"/>
+                                            <action selector="loginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5i-z9-Jux"/>
+                                            <segue destination="vlZ-Vd-hgx" kind="presentation" identifier="1" id="dgr-qY-FDS"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="kcc-fv-i60">
@@ -105,13 +105,13 @@
             <objects>
                 <viewController id="vlZ-Vd-hgx" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vJ0-fF-VtG">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciW-Hi-Ydd">
-                                <rect key="frame" x="154" y="140" width="83" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciW-Hi-Ydd">
+                                <rect key="frame" x="153.66666666666666" y="140" width="83" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="cX5-PU-vHP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="cX5-PU-vHP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" name="AccentColor"/>
@@ -121,6 +121,7 @@
                         <viewLayoutGuide key="safeArea" id="byL-ZR-9MD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ciW-Hi-Ydd" firstAttribute="top" secondItem="byL-ZR-9MD" secondAttribute="top" constant="140" id="cGw-Bm-Yj4"/>
                             <constraint firstItem="ciW-Hi-Ydd" firstAttribute="centerX" secondItem="byL-ZR-9MD" secondAttribute="centerX" id="jCS-wz-i5u"/>
                         </constraints>
                     </view>

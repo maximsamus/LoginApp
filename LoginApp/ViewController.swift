@@ -12,18 +12,40 @@ class ViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    let user = "User"
+    let password = "Password"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.nameOfUser = nameTextField.text
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        nameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
     }
     
-    let user = "User"
-    let password = "Password"
     
-    @IBAction func loginButton(_ sender: Any) {
+    
+    @IBAction func loginButton() {
+        
         if nameTextField.text == user && passwordTextField.text == password {
             performSegue(withIdentifier: "1", sender: self)
         }
     }
+    
+    
+    
+    
+    //    @IBAction func loginButton() {
+    //                if nameTextField.text == user && passwordTextField.text == password {
+    //                    performSegue(withIdentifier: "1", sender: self)
+    //                }
+    //    }
     
     
     
