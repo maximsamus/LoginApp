@@ -13,11 +13,12 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(nameOfUser ?? "")!"
     }
     
-    
+    @IBAction func backButton() {
+        dismiss(animated: true)
+    }
 }
