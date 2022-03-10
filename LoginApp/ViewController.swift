@@ -7,56 +7,51 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    let user = "User"
-    let password = "Password"
+    private let user = "User"
+    private let password = "Password"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.nameOfUser = nameTextField.text
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    @IBAction func loginButton() {
+        if nameTextField.text == user && passwordTextField.text == password {
+        } else {
+            alert(
+                title: "Invalid login or password",
+                message: "Please, enter correct login and password"
+            )
+        }
+    }
+    
+    @IBAction func remindUsername() {
+        alert(title: "OOPS!", message: "Your name is User")
+    }
+    
+    @IBAction func remindPassword() {
+        alert(title: "OOPS!", message: "Your password is Password")
+    }
+    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         nameTextField.text = ""
         passwordTextField.text = ""
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-    }
-    @IBAction func loginButton() {
-        if nameTextField.text == user && passwordTextField.text == password {
-            performSegue(withIdentifier: "1", sender: nil)
-        } else {
-            incorrectData(title: "Invalid login or password", message: "Please, enter correct login and password")
-        }
-    }
-    @IBAction func remindUsername() {
-        showUsername(title: "OOPS!", message: "Your name is User")
-    }
-    @IBAction func remindPassword() {
-        showPassword(title: "OOPS!", message: "Your password is Password")
-    }
 }
 
-extension ViewController {
+extension LoginViewController {
     
-    private func showUsername(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    private func showPassword(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    private func incorrectData(title: String, message: String) {
+    private func alert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)

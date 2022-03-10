@@ -17,8 +17,4 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(nameOfUser ?? "")!"
     }
-    
-    @IBAction func backButton() {
-        dismiss(animated: true)
-    }
 }

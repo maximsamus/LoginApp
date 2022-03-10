@@ -42,7 +42,6 @@
 		F7C452EC27D8B9AF0016F677 = {
 			isa = PBXGroup;
 			children = (
-				F7C4530C27D9113C0016F677 /* WelcomeViewController.swift */,
 				F7C452F727D8B9AF0016F677 /* LoginApp */,
 				F7C452F627D8B9AF0016F677 /* Products */,
 			);
@@ -59,6 +58,7 @@
 		F7C452F727D8B9AF0016F677 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				F7C4530C27D9113C0016F677 /* WelcomeViewController.swift */,
 				F7C452F827D8B9AF0016F677 /* AppDelegate.swift */,
 				F7C452FA27D8B9AF0016F677 /* SceneDelegate.swift */,
 				F7C452FC27D8B9AF0016F677 /* ViewController.swift */,
