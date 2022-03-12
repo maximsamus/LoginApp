@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BNs-gf-U4H">
-                                <rect key="frame" x="30" y="22" width="315" height="215"/>
+                                <rect key="frame" x="30" y="75" width="315" height="215"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SfJ-dN-Mbf">
                                         <rect key="frame" x="35" y="0.0" width="245" height="84"/>
@@ -89,7 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BNs-gf-U4H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="1bT-EF-lr8"/>
+                            <constraint firstItem="BNs-gf-U4H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="1bT-EF-lr8"/>
                             <constraint firstItem="BNs-gf-U4H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FEz-gN-GRc"/>
                             <constraint firstItem="BNs-gf-U4H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HPT-Zy-iIR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BNs-gf-U4H" secondAttribute="trailing" constant="30" id="RHy-aE-pve"/>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="952.5" y="64.436619718309856"/>
         </scene>
-        <!--User-->
+        <!--Home-->
         <scene sceneID="GuX-LM-W4U">
             <objects>
-                <viewController title="User" id="vlZ-Vd-hgx" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="vlZ-Vd-hgx" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vJ0-fF-VtG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,21 +158,46 @@
             </objects>
             <point key="canvasLocation" x="951" y="878"/>
         </scene>
-        <!--User Info View Controller-->
+        <!--NewTitle-->
         <scene sceneID="z2l-HU-a7c">
             <objects>
-                <viewController id="Ve5-Ge-pxG" customClass="UserInfoViewController" sceneMemberID="viewController">
+                <viewController title="NewTitle" id="Ve5-Ge-pxG" customClass="UserInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eXr-XO-gdG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="61m-KV-SxC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="29l-Es-5hK"/>
+                    <navigationItem key="navigationItem" title="11" id="29l-Es-5hK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.crop.circle.badge.fill" catalog="system" id="wWz-Hg-DNR">
+                            <connections>
+                                <segue destination="tZ9-Gh-QRX" kind="show" id="FzI-fM-Dw8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="tZ9-Gh-QRX" kind="show" identifier="Go" id="Pa1-ku-VKt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cmi-dd-rn1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2537" y="878"/>
+        </scene>
+        <!--Title 2-->
+        <scene sceneID="FRS-Qg-bLe">
+            <objects>
+                <viewController title="Title 2" id="tZ9-Gh-QRX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NQl-mx-7oW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="u1O-K0-aU3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UxZ-qy-yqo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehn-We-YAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3351" y="878"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8Gx-Fd-iLx">
@@ -198,8 +223,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mEz-oW-rkG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="User" image="person.crop.square.fill" catalog="system" id="Z2w-3N-RVt"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rCy-jQ-xeo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rCy-jQ-xeo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -212,7 +237,11 @@
             <point key="canvasLocation" x="1711" y="878"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pa1-ku-VKt"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="person.crop.circle.badge.fill" catalog="system" width="128" height="113"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">

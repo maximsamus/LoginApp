@@ -12,8 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let user = "User"
-    private let password = "Password"
+    private let userData = User.getData()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -21,7 +20,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton() {
-        guard nameTextField.text == user && passwordTextField.text == password else {
+        guard nameTextField.text == userData.userLogin && passwordTextField.text == userData.userPassword else {
             alert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
