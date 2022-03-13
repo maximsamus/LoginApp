@@ -10,12 +10,11 @@ import UIKit
 class ImageViewController: UIViewController {
 
     
+    @IBOutlet var photoImage: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
-
 }

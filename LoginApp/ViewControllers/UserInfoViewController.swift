@@ -8,7 +8,7 @@
 import UIKit
 
 class UserInfoViewController: UIViewController {
-
+    
     @IBOutlet var aboutMe: UILabel!
     
     var aboutMeInfo: String!
@@ -17,5 +17,4 @@ class UserInfoViewController: UIViewController {
         super.viewDidLoad()
         aboutMe.text = aboutMeInfo
     }
-    
 }
