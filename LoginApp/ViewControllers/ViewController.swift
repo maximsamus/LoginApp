@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let aboutUserVC = navigationVC.topViewController as? UserInfoViewController else { return }
                 aboutUserVC.aboutMeInfo = userData.description
+                aboutUserVC.myPhoto = userData.myPhoto
             } else { return }
         }
     }

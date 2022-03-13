@@ -17,7 +17,6 @@
 		F7C4531627DCDE360016F677 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C4531527DCDE360016F677 /* User.swift */; };
 		F7C4531827DDC9D40016F677 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C4531727DDC9D40016F677 /* UserInfoViewController.swift */; };
 		F7C4531A27DDCA810016F677 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C4531927DDCA810016F677 /* ImageViewController.swift */; };
-		F7C4531C27DE12AC0016F677 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C4531B27DE12AC0016F677 /* photo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		F7C4531527DCDE360016F677 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F7C4531727DDC9D40016F677 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		F7C4531927DDCA810016F677 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageViewController.swift; path = LoginApp/ViewControllers/ImageViewController.swift; sourceTree = SOURCE_ROOT; };
-		F7C4531B27DE12AC0016F677 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 		F7C4531227DCD7980016F677 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				F7C4531B27DE12AC0016F677 /* photo.png */,
 				F7C4530127D8B9B10016F677 /* Assets.xcassets */,
 			);
 			path = Resourses;
@@ -182,7 +179,6 @@
 			files = (
 				F7C4530527D8B9B10016F677 /* LaunchScreen.storyboard in Resources */,
 				F7C4530227D8B9B10016F677 /* Assets.xcassets in Resources */,
-				F7C4531C27DE12AC0016F677 /* photo.png in Resources */,
 				F7C4530027D8B9AF0016F677 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
