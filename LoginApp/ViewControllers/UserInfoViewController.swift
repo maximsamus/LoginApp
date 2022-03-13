@@ -12,7 +12,7 @@ class UserInfoViewController: UIViewController {
     @IBOutlet var aboutMe: UILabel!
     
     var aboutMeInfo: String!
-    var myPhoto: UIImage!
+    var myPhoto: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()

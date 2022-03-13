@@ -8,15 +8,14 @@
 import UIKit
 
 class ImageViewController: UIViewController {
-
+    
     @IBOutlet var photoImage: UIImageView!
     
-    var photo: UIImage!
+    var photo: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoImage = UIImageView(image: photo)
+        photoImage.image = UIImage(named: photo)
+        photoImage.layer.cornerRadius = 20
     }
-    
-    
 }

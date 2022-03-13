@@ -12,7 +12,7 @@ struct User {
     let userLogin: String
     let userPassword: String
     let description: String
-    let myPhoto: UIImage
+    let myPhoto: String
     
     static func getData() -> User {
         User(
@@ -25,7 +25,7 @@ struct User {
             Cейчас я двигаюсь к своей цели.
             Уверен, что все получится и нет ничего невозможного )
             """,
-            myPhoto: UIImage(named: "photo")!
+            myPhoto: "photo"
         )
     }
 }
