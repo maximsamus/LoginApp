@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="952.5" y="64.436619718309856"/>
         </scene>
-        <!--Home-->
+        <!--WelcomeViewController-->
         <scene sceneID="GuX-LM-W4U">
             <objects>
-                <viewController title="Home" id="vlZ-Vd-hgx" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WelcomeViewController" id="vlZ-Vd-hgx" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vJ0-fF-VtG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,17 +158,30 @@
             </objects>
             <point key="canvasLocation" x="951" y="878"/>
         </scene>
-        <!--NewTitle-->
+        <!--UserInfoViewController-->
         <scene sceneID="z2l-HU-a7c">
             <objects>
-                <viewController title="NewTitle" id="Ve5-Ge-pxG" customClass="UserInfoViewController" sceneMemberID="viewController">
+                <viewController title="UserInfoViewController" id="Ve5-Ge-pxG" customClass="UserInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eXr-XO-gdG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juh-Co-tLo">
+                                <rect key="frame" x="158" y="318.5" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="61m-KV-SxC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="juh-Co-tLo" firstAttribute="centerX" secondItem="eXr-XO-gdG" secondAttribute="centerX" id="nsd-sp-Eu3"/>
+                            <constraint firstItem="juh-Co-tLo" firstAttribute="centerY" secondItem="eXr-XO-gdG" secondAttribute="centerY" id="tJe-FB-cV9"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="11" id="29l-Es-5hK">
+                    <navigationItem key="navigationItem" title=" Немного обо мне:" largeTitleDisplayMode="always" id="29l-Es-5hK">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="dwr-s0-9LY"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.crop.circle.badge.fill" catalog="system" id="wWz-Hg-DNR">
                             <connections>
                                 <segue destination="tZ9-Gh-QRX" kind="show" id="FzI-fM-Dw8"/>
@@ -176,24 +189,24 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="tZ9-Gh-QRX" kind="show" identifier="Go" id="Pa1-ku-VKt"/>
+                        <outlet property="aboutMe" destination="juh-Co-tLo" id="o7a-tK-UDv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cmi-dd-rn1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2537" y="878"/>
         </scene>
-        <!--Title 2-->
+        <!--ImageViewController-->
         <scene sceneID="FRS-Qg-bLe">
             <objects>
-                <viewController title="Title 2" id="tZ9-Gh-QRX" sceneMemberID="viewController">
+                <viewController title="ImageViewController" id="tZ9-Gh-QRX" customClass="ImageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NQl-mx-7oW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="u1O-K0-aU3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UxZ-qy-yqo"/>
+                    <navigationItem key="navigationItem" title="Фото:" id="UxZ-qy-yqo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehn-We-YAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,6 +218,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gkv-Vu-RCY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tln-Y4-ocS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -237,9 +251,6 @@
             <point key="canvasLocation" x="1711" y="878"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Pa1-ku-VKt"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="person.crop.circle.badge.fill" catalog="system" width="128" height="113"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>

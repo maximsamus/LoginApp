@@ -14,9 +14,17 @@ class LoginViewController: UIViewController {
     
     private let userData = User.getData()
     
+    //    MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.nameOfUser = nameTextField.text
+        guard let tabVC = segue.destination as? UITabBarController else { return }
+        for viewController in tabVC.viewControllers! {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.nameOfUser = userData.userName
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let aboutUserVC = navigationVC.topViewController as? UserInfoViewController else { return }
+                aboutUserVC.aboutMeInfo = userData.description
+            } else { return }
+        }
     }
     
     @IBAction func loginButton() {
@@ -74,4 +82,4 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
 }
-  
+
