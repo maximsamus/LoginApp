@@ -17,14 +17,15 @@ class LoginViewController: UIViewController {
     //    MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabVC = segue.destination as? UITabBarController else { return }
-        for viewController in tabVC.viewControllers! {
-            if let welcomeVC = viewController as? WelcomeViewController {
+        guard let viewControllers = tabVC.viewControllers else { return }
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
                 welcomeVC.nameOfUser = userData.userName
-            } else if let navigationVC = viewController as? UINavigationController {
+            } else if let navigationVC = $0 as? UINavigationController {
                 guard let aboutUserVC = navigationVC.topViewController as? UserInfoViewController else { return }
                 aboutUserVC.aboutMeInfo = userData.description
                 aboutUserVC.myPhoto = userData.myPhoto
-            } else { return }
+            }
         }
     }
     
